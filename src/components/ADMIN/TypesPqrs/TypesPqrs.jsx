@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { typePqr } from '../../../Redux/action';
 import './typespqrs.css';
-import { Typography } from '@mui/material';
+
 
 export default function TypesPqrs() {
   const dispatch = useDispatch();
