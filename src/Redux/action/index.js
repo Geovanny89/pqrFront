@@ -22,6 +22,7 @@ export function login(formData) {
         try {
             // const responseLogin = await axios.post("http://localhost:3001/api/login", formData)
             const responseLogin = await axios.post("/login", formData)
+            console.log("hola soy el login ",responseLogin)
             const token = responseLogin.data.token;
           
 
