@@ -1,0 +1,33 @@
+
+
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 230px;
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  max-width: 550px;
+}
+.container-login Button {
+  margin-top: 15px;
+  margin-right: 10px;
+  border: 1px solid black;
+  width: 120px;
+  font-size:10px;
+}
+.login-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 45px;
+}
+.logo-container {
+ 
+  margin-right: 15px;
+}
+.logo-container img {
+ width: 150px;
+  margin-right: 15px;
+}

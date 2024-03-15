@@ -1,0 +1,46 @@
+.dashborad {
+    background-color: rgb(193, 193, 204);
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos pequeños */
+ 
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .dashborad img {
+    width: 100px;
+   margin-left:15PX ;
+  }
+  
+  .dashborad h5 {
+    margin: 0;
+    margin-left: 350px; /* Ajuste del margen izquierdo */
+  }
+
+  .AccordionMenu {
+  padding: 16px;
+}
+
+.AccordionMenu h5 {
+  margin-bottom: 16px;
+}
+
+.AccordionMenu a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 8px 0;
+}
+  @media screen and (max-width: 768px) {
+    .dashborad h5 {
+      margin-left: 0; /* Elimina el margen izquierdo en dispositivos pequeños */
+      text-align: center; /* Centra el texto en dispositivos pequeños */
+      margin-top: 10px; /* Añade espacio superior en dispositivos pequeños */
+    }
+  
+    .dashborad img {
+      width: 50px; /* Ajuste del tamaño de la imagen en dispositivos pequeños */
+      margin-right: 10px; /* Ajuste del margen derecho en dispositivos pequeños */
+    }
+  }
+  

@@ -1,0 +1,12 @@
+/* TypesPqrs.css */
+.formContainer {
+    display: flex;
+    flex-direction: row; 
+    align-items: baseline;
+  }
+  
+.botones-tipes{
+    
+    margin-left: 500px;
+    gap: 5px;
+}

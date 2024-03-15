@@ -1,0 +1,65 @@
+.contenedor-register{
+    /* background-color: rgb(51, 121, 234); */
+    border: 1px solid rgb(187, 185, 185);
+    border-radius: 8px;
+    margin-top: 25px;
+    
+    
+}
+.contenedor-register img {
+    margin-top: 10px;
+}
+
+.button-register{
+    
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    font-size: 10px;
+    gap: 200px;
+}
+#register{
+    
+    width: 100px;
+  
+}
+
+.success-alert {
+    margin-top: 15px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Estilos para el mensaje de error */
+  .error-alert {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  @media screen and (max-width: 768px) {
+    .contenedor-register {
+      height: fit-content; /* Adjust height based on content */
+      margin-top: 10px; /* Reduce margin on smaller screens */
+    }
+  
+    .button-register {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center;
+      
+      gap: 10px; /* Reduce gap between buttons */
+    }
+  
+    #register, #login { /* Target both buttons potentially */
+      width: 40%; /* Make buttons full width */
+      font-size: 10px;
+    }
+   
+  }
