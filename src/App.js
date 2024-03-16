@@ -13,16 +13,17 @@ axios.defaults.baseURL = 'https://pqrctc.onrender.com/api/';
 
 
 
+
 function App() {
  
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<PqrsCreate />} />
+        <Route path="/createpqrs" element={<PqrsCreate />} />
         <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/homeUser" element={<ProtectedRoute><HomeUsers /></ProtectedRoute>} />
       </Routes>
     </div>
