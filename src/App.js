@@ -1,5 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import './App.css';
 import PqrsCreate from './components/USER/Pqrs/PqrsCreate';
 import Register from './components/Register/Register';
@@ -9,7 +9,7 @@ import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import HomeUsers from './components/Users/HomeUser/HomeUsers';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-axios.defaults.baseURL = 'https://pqrctc.onrender.com/api/';
+// axios.defaults.baseURL = 'https://pqrctc.onrender.com/api/';
 
 
 
