@@ -6,7 +6,7 @@ import { getAuthToken, setAuthToken } from '../../Auth/Auth';
 export function register(newUser) {
     return async function (dispatch) {
         // const response = await axios.post("http://localhost:3001/api/register", newUser);
-        const response = await axios.post("https://pqrctc.onrender.com/api/register", newUser);
+        const response = await axios.post("/register", newUser);
       
         dispatch({
             type: 'REGISTER',
@@ -21,7 +21,7 @@ export function login(formData) {
     return async function (dispatch) {
         try {
             // const responseLogin = await axios.post("http://localhost:3001/api/login", formData)
-            const responseLogin = await axios.post("https://pqrctc.onrender.com/api/login", formData)
+            const responseLogin = await axios.post("/login", formData)
             console.log("hola soy el login ",responseLogin)
             const token = responseLogin.data.token;
           
@@ -63,7 +63,7 @@ export function typePqr(newTipe) {
   
       
         // const tipePqr = await axios.post('http://localhost:3001/api/typePqr', newTipe,config)
-        const tipePqr = await axios.post('https://pqrctc.onrender.com/api/typePqr', newTipe,config)
+        const tipePqr = await axios.post('/typePqr', newTipe,config)
         
         dispatch({
           type: 'TIPE_PQRS',
@@ -89,7 +89,7 @@ export function alltipePqr(){
       // };
       
       // var json = await axios.get('http://localhost:3001/api/types')
-      var json = await axios.get('https://pqrctc.onrender.com/api/types')
+      var json = await axios.get('/types')
       return dispatch({
         type: 'GET_TIPQRS',
         payload:json.data
@@ -113,7 +113,7 @@ export function updateTipePqrs(id,data){
         },
       };
       // const updateTipe =await axios.put(`http://localhost:3001/api/types/${id}`,data,config)
-      const updateTipe =await axios.put(`https://pqrctc.onrender.com/api/types/${id}`,data,config)
+      const updateTipe =await axios.put(`/types/${id}`,data,config)
       dispatch({
         type:'UPDATETYPE',
         payload: updateTipe.data
@@ -135,7 +135,7 @@ export function deletePqrs(id){
         },
       };
       // const response =await axios.delete(`http://localhost:3001/api/typesDelete/${id}`,config)
-      const response =await axios.delete(`https://pqrctc.onrender.com/api/typesDelete/${id}`,config)
+      const response =await axios.delete(`/typesDelete/${id}`,config)
       
 
       dispatch({
@@ -162,7 +162,7 @@ export function createTipeIdentity (newIdentity) {
         },
       };
       // const tipeIdentity =await axios.post("http://localhost:3001/api/createdIdentity",newIdentity,config)
-      const tipeIdentity =await axios.post("https://pqrctc.onrender.com/api/createdIdentity",newIdentity,config)
+      const tipeIdentity =await axios.post("/createdIdentity",newIdentity,config)
 
       dispatch(allTipesDocument());
       
@@ -189,7 +189,7 @@ export function allTipesDocument(){
       //   },
       // };
       // const allDocuments =await axios.get("http://localhost:3001/api/all")
-      const allDocuments =await axios.get("https://pqrctc.onrender.com/api/all")
+      const allDocuments =await axios.get("/all")
 
       
       
@@ -216,7 +216,7 @@ export function updateTipeDocument(id,data){
         },
       };
       // const updateTipe =await axios.put(`http://localhost:3001/api/update/${id}`,data,config)
-      const updateTipe =await axios.put(`https://pqrctc.onrender.com/api/update/${id}`,data,config)
+      const updateTipe =await axios.put(`/update/${id}`,data,config)
 
       dispatch({
         type:'UPDATE_DOCUMENT',
@@ -242,7 +242,7 @@ export function deleteTypeIdentity(id){
       };
       // Realiza la solicitud para eliminar el tipo de documento
       // await axios.delete(`http://localhost:3001/api/delete/${id}`,config);
-      await axios.delete(`https://pqrctc.onrender.com/api/delete/${id}`,config);
+      await axios.delete(`/delete/${id}`,config);
 
 
       // Despacha la acción DELETE_TYPE_IDENTITY con el ID del tipo eliminado
@@ -271,7 +271,7 @@ export function createUser(newUsers){
         },
       };
       // const newUser = await axios.post("http://localhost:3001/api/user",newUsers,config)
-      const newUser = await axios.post("https://pqrctc.onrender.com/api/user",newUsers,config)
+      const newUser = await axios.post("/user",newUsers,config)
 
       console.log("HOlassss",newUser)
       dispatch({
@@ -297,7 +297,7 @@ export function allUsers(){
         },
       };
       // const usersAll = await axios.get("http://localhost:3001/api/users",config)
-      const usersAll = await axios.get("https://pqrctc.onrender.com/api/users",config)
+      const usersAll = await axios.get("/users",config)
 
       return dispatch({
         type: 'GET_ALL_USERS',
@@ -325,7 +325,7 @@ export function getDetail(id){
         },
       };
       // const detalle = await axios.get(`http://localhost:3001/api/user/${id}`,config)
-      const detalle = await axios.get(`https://pqrctc.onrender.com/api/user/${id}`,config)
+      const detalle = await axios.get(`/user/${id}`,config)
 
       console.log(detalle)
       return dispacth({
@@ -373,7 +373,7 @@ export function updateUser(id,data){
       };
       console.log("ID:", id);
       // const updateuser = await axios.put(`http://localhost:3001/api/users/${id}`,data,config);
-      const updateuser = await axios.put(`https://pqrctc.onrender.com/api/users/${id}`,data,config);
+      const updateuser = await axios.put(`/users/${id}`,data,config);
 
       dispacth({
         type: 'UPDATE_USER',
@@ -391,12 +391,12 @@ export function updateUser(id,data){
 
 
 // http://localhost:3001/api/createPqr
-export function createUserPqr(newTipe) {
+export function createUserPqr(formData) {
   return async function (dispatch) {
     try{
       // const pqrsNew = await axios.post('http://localhost:3001/api/createPqr', newTipe)
-      const pqrsNew = await axios.post('https://pqrctc.onrender.com/api/createPqr', newTipe)
-
+      const pqrsNew = await axios.post('/createPqr', formData)
+      console.log("Holasssss",pqrsNew)
       
       dispatch({
         type: 'PQRS_CREATE_USER',
