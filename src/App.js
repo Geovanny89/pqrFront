@@ -9,8 +9,8 @@ import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import HomeUsers from './components/Users/HomeUser/HomeUsers';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
-// axios.defaults.baseURL = 'https://pqrctc.onrender.com/api/';
-axios.defaults.baseURL = 'http://localhost:3001/api/';
+axios.defaults.baseURL = 'https://pqrctc.onrender.com/api/';
+// axios.defaults.baseURL = 'http://localhost:3001/api/';
 
 
 
